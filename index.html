@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Applicant Ranker - AI-Powered Candidate Matching</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(120deg, #0077B5, #00A0DC);
+        }
+        .feature-card {
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-[#0077B5]">LinkedRank</span>
+                </div>
+                <div class="flex items-center">
+                    <a href="#signup" class="bg-[#0077B5] text-white px-4 py-2 rounded-md hover:bg-[#005582] transition-colors">
+                        Get Early Access
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    AI-Powered LinkedIn Applicant Ranking
+                </h1>
+                <p class="text-xl md:text-2xl mb-8">
+                    Automatically rank and match job applicants based on their LinkedIn profiles
+                </p>
+                <a href="#signup" class="bg-white text-[#0077B5] px-8 py-3 rounded-md text-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Join Waitlist
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                <div class="text-[#0077B5] text-4xl mb-4">
+                    <i class="fas fa-upload"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Upload Job Description</h3>
+                <p class="text-gray-600">Simply paste your job description or requirements to get started</p>
+            </div>
+            <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                <div class="text-[#0077B5] text-4xl mb-4">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Connect LinkedIn</h3>
+                <p class="text-gray-600">Securely connect with LinkedIn to access applicant profiles</p>
+            </div>
+            <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                <div class="text-[#0077B5] text-4xl mb-4">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Get Rankings</h3>
+                <p class="text-gray-600">Receive AI-powered rankings and matching scores for each applicant</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Form Section -->
+    <div id="signup" class="bg-gray-100 py-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-lg shadow-xl p-8">
+                <h2 class="text-3xl font-bold text-center mb-8">Get Early Access</h2>
+                <form id="signupForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#0077B5] focus:ring-[#0077B5]">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Work Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#0077B5] focus:ring-[#0077B5]">
+                    </div>
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-700">Company Name</label>
+                        <input type="text" id="company" name="company" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#0077B5] focus:ring-[#0077B5]">
+                    </div>
+                    <div>
+                        <label for="role" class="block text-sm font-medium text-gray-700">Your Role</label>
+                        <select id="role" name="role" required
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#0077B5] focus:ring-[#0077B5]">
+                            <option value="">Select your role</option>
+                            <option value="recruiter">Recruiter</option>
+                            <option value="hiring_manager">Hiring Manager</option>
+                            <option value="hr">HR Professional</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-[#0077B5] text-white px-4 py-2 rounded-md hover:bg-[#005582] transition-colors">
+                        Join Waitlist
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400">© 2024 LinkedRank. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            try {
+                const response = await fetch('/signup', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                alert(data.message);
+                this.reset();
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            }
+        });
+    </script>
+</body>
+</html> 
