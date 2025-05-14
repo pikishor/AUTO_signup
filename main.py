@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
 import uvicorn
+from datetime import datetime
 
 app = FastAPI()
 
@@ -26,9 +27,20 @@ async def signup(
     company: str = Form(...),
     role: str = Form(...)
 ):
-    # Here you would typically save the data to a database
-    # For now, we'll just print it
-    print(f"New signup: {name} ({email}) from {company} as {role}")
+    # Create signups directory if it doesn't exist
+    signups_dir = Path("signups")
+    signups_dir.mkdir(exist_ok=True)
+    
+    # Get current timestamp
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    # Format the signup data
+    signup_data = f"Timestamp: {timestamp}\nName: {name}\nEmail: {email}\nCompany: {company}\nRole: {role}\n{'='*50}\n"
+    
+    # Append to signups.txt file
+    with open(signups_dir / "signups.txt", "a") as f:
+        f.write(signup_data)
+    
     return {"status": "success", "message": "Thank you for your interest! We will contact you soon."}
 
 if __name__ == "__main__":
